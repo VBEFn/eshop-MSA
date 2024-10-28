@@ -19,7 +19,7 @@ pipeline {
               # Define the environment variable
               - name: CRED
                 valueFrom:
-                  configMapKeyRef:
+                  secretKeyRef:
                     name: jenkinscred
                     key: ECR_CREDENTIAL_JSON
           restartPolicy: Never
